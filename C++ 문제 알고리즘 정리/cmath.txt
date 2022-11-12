@@ -1,0 +1,2 @@
+01. pow
+ - pow(int, pow)

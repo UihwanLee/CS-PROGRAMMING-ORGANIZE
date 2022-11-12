@@ -1,0 +1,12 @@
+01. vector 초기화
+ - vector<DataType> v;
+ - vector<DataType> v = { //data };
+ - vector<DataType> v(size, data);
+
+02. 벡터 페어 배열
+ - vector<pair<int, string>> v
+ - v.push_back(pair<int, string>(2, "ABC"));
+ - v[i].first = 2 and v[i].second = "ABC"
+
+03. 벡터 가장 위에 원소 빼기
+ - v.pop_back()

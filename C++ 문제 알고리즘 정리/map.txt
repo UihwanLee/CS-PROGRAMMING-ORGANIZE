@@ -1,0 +1,19 @@
+01. map 초기화
+ - map<dataType, dataType> m;
+
+02. map 요소 삽입
+ - m.insert({dataType, dataType
+ - m.insert(pair<dataType, dataType>(data, data));
+
+03. map 반복문 데이터 접근
+ - for(auto iter = m.begin(); iter != m.end(); iter++)
+   {
+	iter->first, iter->second
+   }
+
+04. map 요소 삭제
+ - m.erase(key);
+ - m.clear();
+
+05. map 요소 탐색
+ - m[key] or m.at(key)
