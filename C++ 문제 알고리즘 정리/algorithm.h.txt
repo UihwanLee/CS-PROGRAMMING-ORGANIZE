@@ -1,0 +1,18 @@
+01. 정렬
+ - sort(v.begin(), v.end()) (오름차순)
+ - sort(v.begin(), v.end(), greater<>()) (내림차순)
+ - sort(v.begin(), v.end(), comp) (comp 함수 조건에 따라 정렬)
+
+02. 원소 찾기
+ - if(v.find(v.begin(), v.end(), key) != v.end()) // 원소 찾음!
+ - if(v.find(key) != string::npos) // 원소 찾음!
+
+03. 원소(key)를 c로 교체
+ - int idx = v.find(key)
+ - if(idx == string::npos) break;
+ - v.replace(idx, key.length(), c);
+
+04. 원소 밀기
+ - rotate(v.begin(), v.begin() + 1, v.end()) (왼쪽으로 1칸 밀기)
+ - rotate(v.begin(), v.begin()+k, v.end()) (왼쪽으로 k 칸 밀기)
+ - rotate(v.rbegin(), v.rbegin()+k, v.rend()) (오른쪽으로 k 칸 밀기)
