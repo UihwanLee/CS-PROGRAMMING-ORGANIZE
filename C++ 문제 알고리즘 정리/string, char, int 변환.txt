@@ -2,6 +2,7 @@
 02. int to string 변환 : to_string(data)
 03. char to string 변환 : str += c;
 04. char to int 변환 : data - '0'
-05. string to long long 변환 : stoll(data)
+05. int to char 변환 : data + '0';
+06. string to long long 변환 : stoll(data)
 
 atoi, atol, atoll : 널 종료 문자열을 정수로 바꾼다.
