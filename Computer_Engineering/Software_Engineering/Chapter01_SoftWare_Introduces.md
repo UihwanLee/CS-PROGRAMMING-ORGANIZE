@@ -1,6 +1,6 @@
 # Chapter01 - Software Introduce
 
-### 운영체제의 시작과 발전
+### Software Introduce
 
 ```
 소프트웨어공학에 대한 기본 개념을 이해한다.
