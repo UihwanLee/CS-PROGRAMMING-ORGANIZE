@@ -279,8 +279,40 @@
       <li>프로세스의 코드, 데이터, 힙, 스택은 물리 메모리에 흩어져서 저장 → 불연속 메모리 할당</li>  
     </ul>
     </ul>
-<img src="https://user-images.githubusercontent.com/36596037/226576067-5a3de603-39e6-40eb-962f-f54df6ced04c.png">
+<img src="https://user-images.githubusercontent.com/36596037/226576067-5a3de603-39e6-40eb-962f-f54df6ced04c.png" width="500" height="700">
 </details>
 
+<details>
+  <summary><span style="border-bottom:0.05em solid"><strong>프로세스 제어 블록(PCB)에 저장되는 정보 - 1/2</strong></span></summary>
+    <ul>
+     <li>운영체제마다 프로세스 제어 블록에 저장되는 요소와 프로세스 상태 등이 다름</li>
+     <ol>
+      <li>프로세스 번호(PID, Process ID)</li>
+      <ul>
+       <li>0과 양의 정수, 유일한 번호, 이 번호로 프로세스를 구분</li>
+    </ul>
+      <li>부모 프로세스 번호(PPID, Parent Process ID)</li>
+      <ul>
+       <li>부모 프로세스의 PID</li>
+    </ul>
+      <li>프로세스 상태(Process State) 정보</li>
+      <ul>
+       <li>준비, 실행 중, 블록(입출력 완료대기) 등</li>
+    </ul>
+      <li>CPU 컨텍스트(문맥) 정보</li>
+      <ul>
+       <li>PC: 프로세스가 선택되면 실행을 시작할 프로세스 내 코드 주소</li>
+       <li>SP 및 기타 레지스터</li>
+       <li>사용자 모드에 있었던 경우, 사용자 공간의 코드 주소</li>
+       <li>커널 모드에 있었던 경우, 커널 공간의 코드 주소</li>
+    </ul>
+      <li>스케줄링 정보</li>
+      <ul>
+       <li>우선 순위(Priority) 값, nice 값, 스케줄 큐에 대한 포인터 등</li>
+    </ul>
+    </ol>
+ </ul>
+<img src="https://user-images.githubusercontent.com/36596037/226578134-7aa42ced-830b-4bf6-a36a-7e825fb22948.png" width="500" height="700">
+</details>
 
 
