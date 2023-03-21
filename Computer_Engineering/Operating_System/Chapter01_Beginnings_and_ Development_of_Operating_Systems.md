@@ -71,3 +71,4 @@
 </details>
 
 <span style="color:red">프로세스 관리</span>(process management)
+<span style="color:red"> 글씨색 변경 </span>
