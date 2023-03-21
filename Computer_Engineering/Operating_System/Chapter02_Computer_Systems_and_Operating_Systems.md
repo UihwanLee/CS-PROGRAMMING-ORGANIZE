@@ -310,6 +310,11 @@
 <img src="https://user-images.githubusercontent.com/36596037/226603160-f959d282-3a8c-47b1-b2d5-79f417260c1f.png">
 </details>
  
+<hr>
+
+### 3. 커널과 시스템 호출
+<br>
+ 
   <details>
   <summary><span style="border-bottom:0.05em solid"><strong>응용프로그램의 자원 접근 문제</strong></span></summary>
     <ul>
@@ -351,6 +356,46 @@
      </ul>
   </ul>
 <img src="https://user-images.githubusercontent.com/36596037/226605299-6fddb95d-13f5-49d7-9948-f3f495732771.png">
+</details>
+ 
+  <details>
+  <summary><span style="border-bottom:0.05em solid"><strong>사용자 공간 크기의 의미</strong></span></summary>
+    <ul>
+     <li>사용자 공간 크기</li> 
+     <ul>
+      <li>한 응용프로그램의 최대 크기 결정</li> 
+      <ul>
+       <li>프로그램 코드 + 데이터(전역변수) + 힙(동적할당) + 스택 합친 크기</li> 
+       <li>예) 32비트 Windows 운영체제에서 사용자 공간 2GB → 응용프로그램을 2GB 크기이상 개발할 수 없음</li> 
+      </ul>
+     </ul>
+     <li>사용자 공간의 주소 범위</li> 
+     <ul>
+      <li>응용프로그램은 운영체제가 설정한 사용자 공간의 주소 범위를 넘어설 수 없음</li> 
+      <ul>
+       <li>예) 32비트 Windows 운영체제에서 응용프로그램은 0~7FFFFFFF 범위의 주소를 넘어 액세스하면 바로 종료(심각한 오류</li> 
+      </ul>
+     </ul>
+  </ul>
+<img src="https://user-images.githubusercontent.com/36596037/226606196-7e99e653-6abf-413b-90ee-4a32242723cf.png">
+</details>
+ 
+ <details>
+  <summary><span style="border-bottom:0.05em solid"><strong>가상(논리) 주소 공간</strong></span></summary>
+    <ul>
+     <li>가상(virtual, 논리) 주소공간 = 사용자 공간 + 커널 공간</li>
+     <li>개념</li>
+     <ul>
+      <li>근래의 운영체제에서 사용자나 응용프로그램 관점에서 보는 주소 범위(공간)</li> 
+      <ul>
+       <li>물리 메모리의 주소 범위(공간)와 다름</li> 
+      </ul>
+      <li>프로그래머는 자신의 프로그램이 항상 물리 주소(메모리 주소) 0번지 부터 시작해 연속적으로 배치/실행되며, 
+       또한 실행시에는 CPU의 전체 주소 공간(물리 주소 공간)을 혼자만 사용할 수 있다고 착각</li> 
+     </ul>
+    </ul>
+  </ul>
+<img src="(https://user-images.githubusercontent.com/36596037/226606861-0b380de4-e76d-498a-bac3-7608423cd86c.png">
 </details>
  
  
