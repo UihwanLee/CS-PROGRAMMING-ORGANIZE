@@ -256,4 +256,58 @@
       </ul>
      </ul>
   </ul>
+ <img src="https://user-images.githubusercontent.com/36596037/226602418-bcd23719-7efb-4663-bd8c-a1e040e896e2.png">
 </details>
+
+<details>
+  <summary><span style="border-bottom:0.05em solid"><strong>커널의 형태에 따른 구분</strong></span></summary>
+    <ul>
+     <li>모놀리식(Monolithic) 커널</li> 
+     <ul>
+      <li>단일 커널이라고도 부르며 커널의 모든 기능이 하나의 덩어리로 구현됨 → Unix, Linux, DOS, Solaris 등</li> 
+     </ul>
+     <li>마이크로(Micro) 커널</li> 
+     <ul>
+      <li>기본 핵심 기능만 커널에 구현하고 나머지 기능은 ‘서버’라는 프로세스로 제공 → Mach, QNX, Symbian, Mac OS X, Minix</li> 
+     </ul>
+     <li>하이브리드(혼합형) 커널</li> 
+     <ul>
+      <li>현재는 순수 마이크로 커널 방식은 없고 모놀리식 커널과 마이크로 커널의 장단점을 섞어서 사용 → Windows</li> 
+     </ul>
+  </ul>
+</details>
+ 
+ <details>
+  <summary><span style="border-bottom:0.05em solid"><strong>운영체제 커널 인터페이스: 시스템 호출과 인터럽트</strong></span></summary>
+    <ul>
+     <li>커널에 접근하는 2가지의 인터페이스: 시스템 호출과 인터럽트</li> 
+     <ul>
+      <li>1) 시스템 호출 → 응용 프로그램에서 커널을 호출하는 방법</li> 
+      <li>2) 인터럽트 → 하드웨어에서 커널을 호출하는 방법</li> 
+     </ul>
+     <li>1) 시스템 호출(system call)</li> 
+     <ul>
+      <li>커널과 응용프로그램 사이의 인터페이스이며 응용프로그램에서 커널 기능을 사용할 수 있는 유일한 방법</li> 
+      <li>시스템 호출 라이브러리를 통해 다양한 시스템 호출 함수 제공하며 운영체제 패키지에 포함됨</li> 
+     </ul>
+     <li>2) 인터럽트(interrupt)</li> 
+     <ul>
+      <li>커널과 하드웨어 장치 사이의 인터페이스</li> 
+      <li>인터럽트가 발생하면</li> 
+      <ul>
+       <li>① CPU는 하던 일을 중단하고 인터럽트 서비스 루틴(ISR: Interrupt Service Routine) 실행</li> 
+       <li>② 인터럽트 서비스 루틴은 대부분 디바이스 드라이버 내에 있음</li> 
+       <li>③ 인터럽트 서비스 루틴은 커널 영역에 적재</li> 
+       <li>④ CPU는 인터럽트 서비스 루틴의 실행을 마치면 하던 작업 계속</li> 
+      </ul>
+      <li>인터럽트 활용</li> 
+      <ul>
+       <li>운영체제가 장치에게 지시한 입출력 작업의 완료, 예고 없는 네트워크 데이터의 도착, 키보드나 마우스의 입력, 부족한 배터리 경고 등 장치와 관련된 모든 이벤트 처리</li> 
+      </ul>
+     </ul>
+  </ul>
+
+<img src="https://user-images.githubusercontent.com/36596037/226603160-f959d282-3a8c-47b1-b2d5-79f417260c1f.png">
+</details>
+ 
+ 
