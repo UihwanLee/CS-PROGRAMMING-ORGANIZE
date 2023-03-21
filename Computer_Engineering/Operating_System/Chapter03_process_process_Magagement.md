@@ -349,8 +349,7 @@
       <li>상태 정보는 PCB(프로세서 제어 블록)에 기록되고, 상태가 바뀔 때마다 운영제제에 의해 갱신됨</li>
     </ul>    
    </ul>
- <img src="[https://user-images.githubusercontent.com/36596037/226578134-7aa42ced-830b-4bf6-a36a-7e825fb22948.png](https://user-images.githubusercontent.com/36596037/226582565-23e84bc6-208b-48ea-9556-f1f90436fbd8.png)">
-
+ <img src="https://user-images.githubusercontent.com/36596037/226582565-23e84bc6-208b-48ea-9556-f1f90436fbd8.png">
 </details>
 
 
