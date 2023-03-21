@@ -122,3 +122,138 @@
   <img src="https://user-images.githubusercontent.com/36596037/226598440-174eb550-33fc-4386-8f55-a8a819990933.png">
   <img src="https://user-images.githubusercontent.com/36596037/226598485-fc82c863-037e-451a-8e5e-3fef18f41570.png">
 </details>
+ 
+ <details>
+  <summary><span style="border-bottom:0.05em solid"><strong>스택(Stack)은 어디에 있는가?</strong></span></summary>
+    <ul>
+     <li>프로그램이 실행되기 위해 운영체제가 할당하는 4개의 공간</li> 
+     <ul>
+      <li>1) 코드(code) 공간 – 프로그램 코드 적재</li>
+      <li>2) 데이터(data) 공간 - 전역 변수들이 적재되는 공</li>
+      <li>3) 힙(heap) 공간 – 프로그램에서 동적 할당 받는 공간</li>
+      <li>4) 스택(stack) 공간 – 함수가 호출될 때 매개변수, 지역변수 등 저장</li>
+     </ul>
+     <li>스택</li> 
+     <ul>
+      <li>메모리의 일부를 스택으로 사용하도록 할당된 공간</li>
+      <li>C운영체제는 각 프로그램에게 스택 공간을 할당하며 SP 레지스터는 현재 CPU가 실행중인 프로그램의 스택 꼭대기 주소를 가리킴</li>
+     </ul>
+  </ul>
+  <img src="https://user-images.githubusercontent.com/36596037/226599142-f2afdea1-5d74-4b2c-94c8-cdf4f69b665b.png">
+</details>
+ 
+<details>
+  <summary><span style="border-bottom:0.05em solid"><strong>컨텍스트(Context, 문맥)</strong></span></summary>
+    <ul>
+     <li>한 프로그램이 실행 중인 일체의 상황 혹은 상황 정보</li> 
+     <ul>
+      <li>CPU 레지스터들의 값</li>
+      <ul>
+       <li>PC(코드 주소), SP(스택 주소), 기타 다른 레지스터들의 값</li>
+      </ul>
+      <li>메모리</li>
+      <ul>
+       <li>프로그램 코드와 데이터, 스택, 동적 할당을 받아 저장한 값</li>
+      </ul>
+      <li>축소 정의한 컨텍스트(문맥)의 정의</li>
+      <ul>
+       <li>메모리의 내용은 문맥 교환시에도 유지되므로 CPU 레지스터들의 값만으로 정의</li>
+      </ul>
+     </ul>
+ </ul>
+ <img src="https://user-images.githubusercontent.com/36596037/226600101-5c7b03ee-1f69-4237-8b9c-192a70d5274a.png">
+</details>
+ 
+ <details>
+  <summary><span style="border-bottom:0.05em solid"><strong>컨텍스트 스위칭(문맥 교환)</strong></span></summary>
+    <ul>
+     <li>CPU가 현재 프로그램의 실행을 중지하고 다른 프로그램을 실행할 때 발생</li> 
+     <li>컨텍스트 스위칭 과정</li> 
+     <ul>
+      <li>1) 현재 실행중인 프로그램의 컨텍스트(CPU 레지스터들의 값)를 메모리에 저장</li> 
+      <li>2) 새로 실행시킬 프로그램의 저장된 컨텍스트(CPU 레지스터들의 값)를 CPU에 복귀</li> 
+     </ul>
+  </ul>
+   <img src="https://user-images.githubusercontent.com/36596037/226600195-23b5a2c6-17c1-457a-8007-8510897010ed.png">
+</details>
+
+<hr>
+
+### 2. 컴퓨터 시스템의 계층 구조와 운영체제 인터페이스
+<br>
+ 
+<details>
+  <summary><span style="border-bottom:0.05em solid"><strong>컴퓨터 시스템 계층 구조</strong></span></summary>
+    <ol>
+     <li>사용자</li> 
+     <li>응용프로그램</li> 
+     <li>운영체제</li> 
+     <ul>
+      <li>커널 코드</li> 
+      <li>디바이스 드라이버</li> 
+     </ul>
+     <li>하드웨어</li> 
+  </ol>
+   <img src="https://user-images.githubusercontent.com/36596037/226600676-17241ac6-5de0-4895-a23d-873c9629f63a.png">
+</details>
+ 
+<details>
+  <summary><span style="border-bottom:0.05em solid"><strong>컴퓨터 시스템이 계층 구조로 설계된 이유</strong></span></summary>
+    <ul>
+     <li>계층간 독립성 확보(칸막이가 있다고 생각 = 다른 계층의 상세 내용은 몰라도 사용 가능)를 위해</li> 
+     <ul>
+      <li>사용자</li> 
+      <ul>
+       <li>운영체제나 하드웨어에 대해 몰라도 응용프로그램으로 컴퓨터 활용</li> 
+      </ul>
+      <li>응용프로그램</li> 
+      <ul>
+       <li>컴퓨터 하드웨어의 타입이나 구조, 제어 방법을 몰라도 개발 가능</li>
+       <li>컴퓨터 하드웨어가 바뀌어도 응용프로그램을 다시 작성할 필요 없음</li>
+      </ul>
+      <li>운영체제</li> 
+      <ul>
+       <li>운영체제는 장치 관련된 모든 작업을 디바이스 드라이버에게 요청</li>
+       <li>응용프로그램과 하드웨어 사이의 인터페이스</li>
+      </ul>
+  </ul>
+</details>
+ 
+<details>
+  <summary><span style="border-bottom:0.05em solid"><strong>왜 운영체제가 필요한가?</strong></span></summary>
+    <ul>
+     <li>운영체제가 없다면</li> 
+     <ul>
+      <li>응용프로그램이나 사용자가 직접 하드웨어를 제어해야 함</li> 
+      <li>하드웨어에 대한 지식이 필요하며, 충돌, 관리, 보안의 문제 발생</li> >
+     </ul>
+     <li>운영체제의 필요성 → 자원에 대한 충돌 해결, 성능 최적화, 사용자의 시스템 사용 효율화</li>
+  </ul>
+</details>
+ 
+ <details>
+  <summary><span style="border-bottom:0.05em solid"><strong>운영체제의 구성 요소와 커널</strong></span></summary>
+  <img src="https://user-images.githubusercontent.com/36596037/226601783-78d3bab0-f9d1-4839-91ee-8be87ccec5aa.png">
+</details>
+ 
+ <details>
+  <summary><span style="border-bottom:0.05em solid"><strong>운영체제 구성</strong></span></summary>
+    <ul>
+     <li>운영체제 = 커널 + 툴 + 디바이스 드라이버</li> 
+     <ul>
+      <li>1) 커널(kernel)</li> 
+      <ul>
+       <li>운영체제의 핵심 부분, 좁은 의미의 운영체제, 부팅 후 메모리에 상주하는 코드와 데이터이며 운영체제의 핵심 기능 모두 구현</li> 
+       <li>커널 코드는 함수들의 집합이며 커널 기능을 이용하려면 응용프로그램은 반드시 시스템 호출 사용</li> >
+      </ul>
+      <li>2) 도구(tool) 소프트웨어와 GUI</li>
+      <ul>
+       <li>사용자가 컴퓨터를 편리하게 사용할 수 있도록 제공하는 툴 소프트웨어 혹은 툴 응용프로그램</li> 
+      </ul>
+      <li>3) 디바이스 드라이버(device driver)</li>
+      <ul>
+       <li>장치를 직접 제어하고 입출력을 담당하는 소프트웨어</li> 
+      </ul>
+     </ul>
+  </ul>
+</details>
