@@ -234,7 +234,7 @@
   <img src="https://user-images.githubusercontent.com/36596037/226622847-519769d4-d36f-41c8-ba2e-4928cb13667a.png"> 
 </details>
 
- <hr>
+<hr>
 
 ### 3. Agile Software Development
 <br>
@@ -343,24 +343,35 @@
 
      
 <details>
-  <summary><span style="border-bottom:0.05em solid"><strong>애자일 프로젝트 관리</strong></span></summary>
+  <summary><span style="border-bottom:0.05em solid"><strong>RUP의 각 단계 및 작업영역</strong></span></summary>
     <ul>
-     <li>스크럼(Scrum)</li> 
-     <ul>
-      <li>애자일 프로젝트를 조직화하기 위한 프레임워크를 제공</li> 
-      <li>진행중인 내용에 대한 외부 가시화를 제공</li>
-    </ul>
-     <li>Scrum sprint cycle</li> 
-     <ul>
-      <li>스프린트 주기는 보통 2~4주</li>  
-      <li>팀은 완료 가능하다고 생각하는 가장 높은 우선순위의 항목을 선택</li>  
-      <li>스프린트를 거치는 동안, 진척도를 점검하고 필요한 경우 업무의 우선순위를 변경하기 위해 팀은 매일 짧은 미팅인 스크럼을 진행</li>  
-      <li>스크럼팀 사이에 매일 이루어지는 상호작용은 스크럼 보드를 통해 조정이 이루어짐</li>  
-      <li>각 스프린트가 끝날 대는 모든 팀이 점검 미팅을 함</li>  
-    </ul> 
+     <li>도입 : 프로젝트의 범위와 목표를 식별</li> 
+     <li>발단 : 프로젝트의 위험요소를 식별하고 초기 아키텍처를 정의</li> 
+     <li>구축 : 대부분의 소프트웨어가 구축되고 테스트 됨</li> 
+     <li>전이 : 미 해결된 위험요소를 해결하고 고객에게 시스템을 인도</li> 
    </ul>
-   <img src="https://user-images.githubusercontent.com/36596037/226627240-2410c109-7fef-4b1b-8f69-fdb514b6855c.png"> 
-   <img src="https://user-images.githubusercontent.com/36596037/226627251-14ae8377-7fca-4cfa-8768-2160783145e2.png"> 
+   <img src="https://user-images.githubusercontent.com/36596037/226628777-b6a9abf0-0308-4c8d-9166-2819dacafcec.png"> 
 </details>
      
+<details>
+  <summary><span style="border-bottom:0.05em solid"><strong>시스템 개발 목표 및 방안</strong></span></summary>
+   <img src="https://user-images.githubusercontent.com/36596037/226629367-f3b588b8-5d3c-4ebc-bb66-50b25d2e9584.png"> 
+</details>
+
+<details>
+  <summary><span style="border-bottom:0.05em solid"><strong>반복 주기 계획</strong></span></summary>
+   <img src="https://user-images.githubusercontent.com/36596037/226629753-2ecfdc52-c0f6-411c-ae23-efcaa105b881.png"> 
+</details>
+     
+<hr>
+
+     
+### 5. Software Process Improvement
+<br>
+     
+<details>
+  <summary><span style="border-bottom:0.05em solid"><strong>MIL-STD-498 : 미 국방부가 1994년에 발표한 소프트웨어 개발 및 문서화 표준</strong></span></summary>
+ 
+   <img src="https://user-images.githubusercontent.com/36596037/226629753-2ecfdc52-c0f6-411c-ae23-efcaa105b881.png"> 
+</details>  
 
