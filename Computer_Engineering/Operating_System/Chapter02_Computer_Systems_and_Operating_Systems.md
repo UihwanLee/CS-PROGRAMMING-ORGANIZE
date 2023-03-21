@@ -393,9 +393,117 @@
       <li>프로그래머는 자신의 프로그램이 항상 물리 주소(메모리 주소) 0번지 부터 시작해 연속적으로 배치/실행되며, 
        또한 실행시에는 CPU의 전체 주소 공간(물리 주소 공간)을 혼자만 사용할 수 있다고 착각</li> 
      </ul>
-    </ul>
+     <li>가상(virtual, 논리) 주소공간 = 사용자 공간 + 커널 공간</li>
+      <ul>
+       <li>각 응용프로그램 마다 2GB의 사용자 주소 공간을 가짐)</li> 
+       <li>커널 공간은 2GB의 커널 주소 공간을 가짐</li> 
+     </ul>
   </ul>
-<img src="(https://user-images.githubusercontent.com/36596037/226606861-0b380de4-e76d-498a-bac3-7608423cd86c.png">
+<img src="https://user-images.githubusercontent.com/36596037/226606861-0b380de4-e76d-498a-bac3-7608423cd86c.png">
 </details>
  
+ <details>
+  <summary><span style="border-bottom:0.05em solid"><strong>가상(논리) 주소 공간 - 2가지 해결</strong></span></summary>
+    <ul>
+     <li>사용자 공간의 충돌 해결</li>
+     <ul>
+      <li>부분 적재의 개념</li> 
+      <ul>
+       <li>응용프로그램의 가상(논리) 주소 공간의 전체가 반드시 물리 메모리에 위치하지 않아도 되며, 당장 실행에 필요한 부분만 물리 메모리에 위치해도 됨 → 매핑 테이블을 이용해 관리</li> 
+      </ul>
+      <li>각 응용프로그램의 가상 주소 공간을 물리 주소 공간으로 매핑</li> 
+      <li>여러 응용프로그램의 사용자 공간이 물리 메모리를 나누어 사용</li> 
+      <li>커널 공간 역시 물리 메모리에 매핑</li> 
+     </ul>
+     <li>물리 메모리가 작은 경우에 대한 해결</li>
+      <ul>
+       <li>운영체제는 물리 메모리를 하드 디스크에 저장하여 물리 메모리의 빈 영역 확보 → 가상 메모리 기법</li> 
+       <li>프로그램의 일부분 만을 물리 메모리에 적대하고 실행 → 부분 적재 (프로세스의 공간 중에서 일부분 만 물리 메모리로 적재)</li> 
+     </ul>
+  </ul>
+<img src="https://user-images.githubusercontent.com/36596037/226607910-904c2d04-be0b-4474-bf9a-60e2d224f070.png">
+<img src="https://user-images.githubusercontent.com/36596037/226607927-775d15bf-ef11-4a60-80fc-5568d1ec582e.png">
+</details>
+ 
+<details>
+  <summary><span style="border-bottom:0.05em solid"><strong>사용자 모드와 커널 모드</strong></span></summary>
+    <ul>
+     <li>특정 시점에서 CPU는 사용자 모드와 커널 모드 중에서 하나의 모드로만 실행</li>
+     <ul>
+      <li>CPU 내부에 모드 상태를 나타내는 ‘(모드) 상태 레지스터’ 있음.</li> 
+      <ul>
+       <li>CPU 마다 구성이 다르며 상태 레지스터의 일부로 모드 비트를 지원</li> 
+      </ul>
+     </ul>
+     <li>1) 사용자 모드(user mode)</li>
+      <ul>
+       <li>CPU의 모드 비트 = 1</li> 
+       <li>CPU는 사용자 공간에 있는 코드나 데이터를 액세스하는 중</li> 
+       <li>CPU의 커널 공간 접근 불허 → 응용프로그램으로부터 커널 영역을 보호</li> 
+       <li>특권 명령(privileged instruction) 실행 불허</li> 
+       <ul>
+        <li>특권 명령 – 입출력 장치 등 하드웨어나 시스템 중단 등 시스템 관련 처리를 위해 설계된 특별한 명령</li> 
+      </ul>
+     </ul>
+     <li>2) 커널 모드(kernel mode, supervisor mode)</li>
+     <ul>
+       <li>CPU의 모드 비트 = 0</li> 
+       <li>CPU가 커널 공간에서 실행하는 중</li> 
+       <li>특권 명령 사용 가능하며 모든 메모리 공간의 사용이 가능</li> 
+     </ul>
+  </ul>
+<img src="https://user-images.githubusercontent.com/36596037/226608771-9c76e890-23b9-4b08-ad77-e1444b51060f.png">
+</details>
+ 
+<details>
+  <summary><span style="border-bottom:0.05em solid"><strong>사용자 모드에서 커널 모드로의 전환</strong></span></summary>
+    <ul>
+     <li>사용자 모드에서 커널 모드로 전환하는 경우는 오직 두 가지 경우만 존재</li>
+     <ul>
+      <li>시스템 호출과 인터럽트 발생</li> 
+     </ul>
+     <li>1) 시스템 호출</li>
+      <ul>
+       <li>응용 프로그램에서 호출</li> 
+       <li>시스템 호출을 실행하는 특별한 기계 명령에 의해 진행</li> 
+     </ul>
+     <li>2) 인터럽트 발생</li>
+     <ul>
+       <li>하드웨어에 의해서 발생</li> 
+       <li>CPU는 인터럽트 서비스 루틴 실행</li> 
+       <li>인터럽트 서비스 루틴이 끝나면 CPU는 사용자 모드로 자동 전환</li> 
+     </ul>
+  </ul>
+<img src="https://user-images.githubusercontent.com/36596037/226609381-e6735aab-64de-4e02-ac0b-6ced7c9f0170.png">
+</details>
+ 
+ <details>
+  <summary><span style="border-bottom:0.05em solid"><strong>특권 명령</strong></span></summary>
+    <ul>
+     <li>특권 명령 → CPU 기계어(명령어)의 일부</li>
+     <ul>
+      <li>입출력 장치로부터의 입출력(I/O), 시스템 중단, 컨텍스트 스위칭, 인터럽트 금지 등 특별한 목적으로 설계된 CPU 명령</li> 
+      <li>커널 모드에서만 실행</li> 
+     </ul>
+     <li>특권 명령 종류</li>
+      <ul>
+       <li>I/O 명령</li> 
+       <li>Halt 명령 → CPU의 작동을 중지시키는 명령. CPU를 유휴 상태로 만듦</li> 
+       <li>인터럽트 플래그를 켜고 끄는 명령</li> 
+       <li>타이머 설정 명령</li> 
+       <li>컨텍스트 스위칭 명령</li> 
+       <li>메모리 지우기 명령</li> 
+       <li>장치 상태 테이블 수정 등의 명령</li> 
+     </ul>
+  </ul>
+</details>
+ 
+  <details>
+  <summary><span style="border-bottom:0.05em solid"><strong>시스템 호출</strong></span></summary>
+    <ul>
+     <li>사용자 공간의 코드에서 커널 서비스를 요청하는 과정</li>
+     <li>운영체제는 시스템 호출 라이브러리 제공</li>
+     <li>시스템 호출은 함수 호출에 비해 많은 시간 비용 → 시스템 호출을 많이 할수록 프로그램 실행 속도 저하</li>
+  </ul>
+</details>
  
