@@ -75,7 +75,7 @@
 
 <br>
 
-
+> 소프트웨어 프로세스 모델
 <details>
   <summary><span style="border-bottom:0.05em solid"><strong>폭포수(Waterfall) 모델</strong></span></summary>
     <ul>
@@ -106,3 +106,171 @@
   <img src="https://user-images.githubusercontent.com/36596037/226618613-68359ee9-eb64-4fab-b533-4b493132ce28.png">  
 </details>
 
+<details>
+  <summary><span style="border-bottom:0.05em solid"><strong>RAD 모델</strong></span></summary>
+    <ul>
+     <li>특징</li> 
+     <ul>
+       <li>아주 짧은 개발주기를 가지는 점진적 소프트웨어 개발 방식</li> 
+       <li>RAD 모델은 컴포넌트를 사용하여 매우 빠르게 선형 순차적 모델을 적용시킬 수 있음</li>
+       <li>시간의 제약은 RAD를 사용한 프로젝트가 확장 가능한 규모를 가지도록 만듬</li> 
+       <li>만약 비즈니스 애플리케이션의 주요 기능들이 모듈화 될 수 있고, 각각의 기능들이 3달 안에 완성 가능하다면, RAD가 사용될 수 있음</li> 
+       <li>각각의 기능들은 각각의 RAD 팀들에게 할당되어 개발된 후, 나중에 통합되어질 수 있음</li>
+    </ul>
+   </ul>
+  <img src="https://user-images.githubusercontent.com/36596037/226619355-ff1f0416-2825-4ecd-930f-f4a2066084fb.png">  
+  <img src="https://user-images.githubusercontent.com/36596037/226619371-ae5f5631-393e-4f01-a123-34cafa1421b0.png">  
+</details>
+
+<details>
+  <summary><span style="border-bottom:0.05em solid"><strong>진화적 개발</strong></span></summary>
+    <ul>
+     <li>특징</li> 
+     <ul>
+       <li>초기에 구현을 시작하고, 그것을 이용하여 사용자의 의견을 반</li> 
+       <li>적당한 시스템이 개발될 때까지 계속해서 버전을 다듬어 감</li>
+       <li>명세화, 개발, 검증 활동은 서로 교차하며 활동 사이에 빠른 피드백이 교환됨</li> 
+    </ul>
+   </ul>
+  <img src="https://user-images.githubusercontent.com/36596037/226619769-b47db0d4-12a5-46e6-9cd7-6c9f37b8b189.png">  
+  <img src="https://user-images.githubusercontent.com/36596037/226619784-37b5f158-2ed2-4c8c-a79d-85e41be69028.png">  
+</details>
+
+<details>
+  <summary><span style="border-bottom:0.05em solid"><strong>나선형(Spiral) 모델</strong></span></summary>
+    <ul>
+     <li>특징</li> 
+     <ul>
+      <li>Boehm이 제안</li> 
+      <li>폭포수 모델과 프로토타입 모델의 장점에 위험분석 기능을 추가한 모델</li>
+      <li>나선을 따라 돌듯이 여러 번의 소프트웨어 개발 과정을 거쳐 점진적으로(프로토타입을 지속적으로 발전시켜) 완벽한 최종 소프트웨어를 개발(점진적 모델 이라고도 힘)</li>
+      <li>소프트웨어를 개발하면서 발생할 수 있는 위험을 관리하고, 최소화하는 것을 목적으로 함</li>
+      <li>프로세스가 진행됨에 따라 소프트웨어도 진화하기 때문에, 고객과 개발자는 각 진화적 프로세스의 위험을 이해하고 해결해야 함</li>
+      <li>프로토타입은 위험(risk)을 줄이는 기능을 가짐</li>
+    </ul>
+   </ul>
+  <img src="https://user-images.githubusercontent.com/36596037/226620386-4fa2ae3f-cb54-4da2-abd3-7be776e61bf8.png">  
+  <img src="https://user-images.githubusercontent.com/36596037/226620396-3b496e7a-f63f-49ea-b15b-149515fc87dc.png">  
+</details>
+
+<details>
+  <summary><span style="border-bottom:0.05em solid"><strong>점진적(Incremental) 모델</strong></span></summary>
+    <ul>
+     <li>특징</li> 
+     <ul>
+      <li>Boehm이 제안</li> 
+      <li>폭포수 모델(선형 순차적 모델)에 프로토타입 모델의 반복 개념을 추가한 모델</li>
+      <li>다른 모델들과 접목이 가능</li>
+      <li>프로토타입과는 달리 점진적 모델은 실제로 작동하는 결과물을 만들어냄</li>
+      <li>프로젝트 기간동안 한번에 모든 기능을 구현할 수 없을 때 유용하게 사용됨</li>
+      <li>최초의 제품은 적은 인력으로 개발하고, 제품이 널리 쓰여지게 되면 인력을 증원하여 다른 추가 사항들을 개발함</li>
+      <li>기술적인 위험을 관리할 수 있음</li>
+    </ul>
+   </ul>
+  <img src="https://user-images.githubusercontent.com/36596037/226620881-24dfc5f9-104a-4adc-95b0-7850901a348a.png">  
+  <img src="https://user-images.githubusercontent.com/36596037/226620892-ac1c1b18-76b8-49c3-9db6-077f448dad98.png">  
+</details>
+
+<details>
+  <summary><span style="border-bottom:0.05em solid"><strong>동시적(Concurrent) 개발 모델</strong></span></summary>
+    <ul>
+     <li>특징</li> 
+     <ul>
+      <li>Boehm이 제안</li> 
+      <li>분석 절차는 언제나 일어날 수 있는 상태(state) 중 하나이며, 다른 절차(설계, 고객과의 의사소통) 역시 그와 비슷하게 표현함</li>
+      <li>모든 절차들은 동시에 존재할 수 있지만, 모두 다른 상태(state)에 있음</li>
+      <li>소프트웨어 절차에서의 각 상태마다, 한 상태에서 다른 상태로 넘어갈때 발생하는 트리거 이벤트들을 정의</li>
+      <li>클라이언트/서버 애플리케이션 개발에서 자주 사용됨</li>
+      <li>클라이언트/서버에 두 가지 차원으로 적용됨</li>
+      <li>동시적 개발 모델은 모든 종류의 소프트웨어 개발에서 사용될 수 있음</li>
+    </ul>
+   </ul>
+  <img src="https://user-images.githubusercontent.com/36596037/226621440-352da3bf-a28f-4c0e-abc8-b69c45dcead9.png">   
+</details>
+
+<details>
+  <summary><span style="border-bottom:0.05em solid"><strong>형식 방법론(Formal Method) 모델</strong></span></summary>
+    <ul>
+     <li>특징</li> 
+     <ul>
+      <li>형식방법론(Formal Method) 모델은 컴퓨터 소프트웨어의 사양을 수학적인 식으로 표현한 것</li> 
+      <li>설계 과정에서 형식방법론이 사용되면 프로그램의 검증(Verification)의 기준으로 사용되어 이전에 쉽게 감지할 수 없었던 에러들을 발견하고 수정할 수 있음</li>
+      <li>모든 절차들은 동시에 존재할 수 있지만, 모두 다른 상태(state)에 있음</li>
+      <li>형식방법론을 적용하기 위한 조건</li>
+      <ul>
+       <li>1. 형식방법론을 사용한 개발은 많은 시간과 비용이 필요</li> 
+       <li>2. 개발자가 형식방법론을 사용한 개발을 수행하려면 많은 교육이 필요</li>
+       <li>3. 형식방법론을 이용한 모델을 이용하면 그 내용을 잘 모르는 고객과 의사소통 하기 어려움</li>
+       /ul>
+      <li>형식방법론 접근방법</li>
+      <ul>
+       <li>고도의 안정성을 요구하는 소프트웨어를 만들려는 개발자들과 에러로 발생하는 비용 때문에 고민하는 개발자들에게 많은 도움을 줌</li> 
+       <li>비행 관제 소프트웨어, 의료 기기 소프트웨어</li>
+       /ul>
+    </ul>
+   </ul> 
+</details>
+    
+<details>
+  <summary><span style="border-bottom:0.05em solid"><strong>컴포넌트-기반 소프트웨어 공학</strong></span></summary>
+    <ul>
+     <li>특징</li> 
+     <ul>
+      <li>대부분의 소프트웨어 프로젝트는 약간의 소프트웨어를 재사용한다.</li> 
+      <li>진화적 방법의 경우, 신속한 시스템 개발에 재사용이 필수적이다.</li>
+      <li>비공식적인 재사용은 사용된 개발 프로세스에 관계없이 일어난다.</li>
+      <li>재사용에 의존하는 컴포넌트 기반 소프트웨어 공학(CBSE; Component-based Software Engineering)</li>
+      <li>재사용 지향 방법은 재사용이 가능한 많은 소프트웨어 컴포넌트가 있고 이 컴포넌트를 통합할 수 있는 틀이 있어야 함</li>
+    </ul>
+   </ul> 
+   <img src="https://user-images.githubusercontent.com/36596037/226622540-1875cd5a-5a39-4fc8-99fd-1e148007fb10.png">  
+  <img src="https://user-images.githubusercontent.com/36596037/226622541-9bacbd24-ac91-425d-95d4-e744fe6eccf6.png"> 
+</details>
+     
+<details>
+  <summary><span style="border-bottom:0.05em solid"><strong>CBSE 프로세스</strong></span></summary>
+  <img src="https://user-images.githubusercontent.com/36596037/226622847-519769d4-d36f-41c8-ba2e-4928cb13667a.png"> 
+</details>
+     
+<details>
+  <summary><span style="border-bottom:0.05em solid"><strong>CBSE 프로세스</strong></span></summary>
+  <img src="https://user-images.githubusercontent.com/36596037/226622847-519769d4-d36f-41c8-ba2e-4928cb13667a.png"> 
+</details>
+
+ <hr>
+
+### 3. Agile Software Development
+<br>
+
+<details>
+  <summary><span style="border-bottom:0.05em solid"><strong>Agile Software Development : 개요</strong></span></summary>
+    <ul>
+     <li>비즈니스 요구사항</li> 
+     <ul>
+      <li>소프트웨어를 빨리 개발하고, 배포해야 함</li> 
+      <li>대부분의 비즈니스 시스템에서 가장 중요한 요구사항</li>
+    </ul>
+     <li>요구사항의 변경</li> 
+     <ul>
+      <li>시스템이 설치되고 사용자가 시스템을 경험한 후, 요구사항이 명확해짐</li> 
+    </ul>
+     <li>계획 주도 소프트웨어 개발 프로세스</li> 
+     <ul>
+      <li>요구사항 명세, 시스템 설계, 구축, 테스트의 프로세스는 신속한 SW 개발에 적합하지 않음</li> 
+    </ul>
+     <li>애자일 기법의 특징</li> 
+     <ul>
+      <li>1. 명세화, 설계 및 구현 프로세스가 중첩됨</li> 
+      <li>2. 시스템을 증가분의 연속으로 구현</li>
+      <li>3. 개발 프로세스를 지원하기 위해 방대한 도구를 사용하게 됨</li>
+    </ul>
+     <li>애자일 기법</li> 
+     <ul>
+      <li>2~3주마다 새로운 시스템을 만들어서 고객이 사용</li> 
+      <li>요구사항에 대한 피드백을 빨리 확보하기 위해 고객이 개발 프로세스에 참여</li>
+      <li>비공식적인 커뮤니케이션을 통해 문서화를 최소화</li>
+    </ul>
+   </ul> 
+   <img src="https://user-images.githubusercontent.com/36596037/226624210-5571fa1b-db1c-4efa-86cf-ab34abddf3c1.png">  
+</details>
+    
