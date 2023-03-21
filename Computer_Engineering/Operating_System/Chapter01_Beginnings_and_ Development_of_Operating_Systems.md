@@ -59,10 +59,10 @@
 <details>
   <summary><span style="border-bottom:0.05em solid"><strong>운영체제의 기능</strong></span></summary>
     <ol>
-     <li><span style="color.red"><li>프로세스 관리</span>(process management)</li> 
-     <li><span style="color.red">메모리 관리</span>(memory management)</li>
-     <li><span style="color.red">파일 시스템 관리</span>(file system management)</li>
-     <li><span style="color.red">장치 관리</span>(device management)</li>
+     <li><span style:"color:red">프로세스 관리</span>(process management)</li> 
+     <li><span style:"color:red">메모리 관리</span>(memory management)</li>
+     <li><span style:"color:red">파일 시스템 관리</span>(file system management)</li>
+     <li><span style:"color:red">장치 관리</span>(device management)</li>
      <li>네트워크 관리</li> 
      <li>보안 관리</li>
      <li>기타 관리</li>
