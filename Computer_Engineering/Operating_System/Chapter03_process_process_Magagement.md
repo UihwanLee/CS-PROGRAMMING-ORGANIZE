@@ -279,14 +279,14 @@
       <li>프로세스의 코드, 데이터, 힙, 스택은 물리 메모리에 흩어져서 저장 → 불연속 메모리 할당</li>  
     </ul>
     </ul>
-<img src="https://user-images.githubusercontent.com/36596037/226576067-5a3de603-39e6-40eb-962f-f54df6ced04c.png" width="500" height="700">
+<img src="https://user-images.githubusercontent.com/36596037/226576067-5a3de603-39e6-40eb-962f-f54df6ced04c.png" width="600" height="500">
 </details>
 
 <details>
-  <summary><span style="border-bottom:0.05em solid"><strong>프로세스 제어 블록(PCB)에 저장되는 정보 - 1/2</strong></span></summary>
+  <summary><span style="border-bottom:0.05em solid"><strong>프로세스 제어 블록(PCB)에 저장되는 정보</strong></span></summary>
     <ul>
      <li>운영체제마다 프로세스 제어 블록에 저장되는 요소와 프로세스 상태 등이 다름</li>
-     <ol>
+     <ul>
       <li>프로세스 번호(PID, Process ID)</li>
       <ul>
        <li>0과 양의 정수, 유일한 번호, 이 번호로 프로세스를 구분</li>
@@ -310,9 +310,38 @@
       <ul>
        <li>우선 순위(Priority) 값, nice 값, 스케줄 큐에 대한 포인터 등</li>
     </ul>
-    </ol>
- </ul>
-<img src="https://user-images.githubusercontent.com/36596037/226578134-7aa42ced-830b-4bf6-a36a-7e825fb22948.png" width="500" height="700">
+      <li>프로세스 종료 코드(정수 0~255)</li>
+      <ul>
+       <li>프로세스가 종료할 때 남기는 정수 값 → 부모 프로세스에게 전달</li>
+       <li>exit() 시스템 호출의 매개변수 값</li>
+       <li>C/C++에서는 main() 함수의 return리턴 값</li>
+      </ul>
+      <li>프로세스의 오픈 파일 테이블</li>
+      <ul>
+       <li>열어놓은(open) 파일 디스크립터 들이 저장되는 배열</li>
+      </ul>
+      <li>메모리 관리 정보</li>
+      <ul>
+       <li>페이지 테이블의 물리 메모리 주소 등</li>
+      </ul>
+      <li>프로세스 사이의 통신 정보들</li>
+      <li>회계 정보</li>
+      <ul>
+       <li>CPU의 사용 시간, 제한 시간, 프로세스의 총 경과시간 등</li>
+       <li>사용료 계산이나 성능 통계에 사용</li>
+      </ul>
+      <li>프로세스 소유자 정보</li>
+      <ul>
+       <li>프로세스를 생성한 사용자의 로그인 이름이나 사용자 ID 등</li>
+      </ul>
+    </ul>
+<img src="https://user-images.githubusercontent.com/36596037/226578134-7aa42ced-830b-4bf6-a36a-7e825fb22948.png" width="600" height="500">
+<img src="https://user-images.githubusercontent.com/36596037/226580288-dda9cb70-4dc7-40f9-b08b-7693b04a6e67.png" width="600" height="500">
+</details>
+
+<details>
+  <summary><span style="border-bottom:0.05em solid"><strong>프로세스 생명 주기와 상태 변이(state change)</strong></span></summary>
+     <img src="https://user-images.githubusercontent.com/36596037/226581123-6a15824c-5ce4-42c0-9ced-0c827c21c056.png" width="1200" height="700">
 </details>
 
 
