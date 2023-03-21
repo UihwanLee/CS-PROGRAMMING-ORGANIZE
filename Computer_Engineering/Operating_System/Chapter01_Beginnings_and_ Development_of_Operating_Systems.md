@@ -58,6 +58,7 @@
 
 <details>
   <summary><span style="border-bottom:0.05em solid"><strong>운영체제의 기능</strong></span></summary>
+ <span style="color:red">프로세스 관리</span>(process management)
     <ol>
      <li><span style="color:red">프로세스 관리</span>(process management)</li> 
      <li><span style:"color:red">메모리 관리</span>(memory management)</li>
