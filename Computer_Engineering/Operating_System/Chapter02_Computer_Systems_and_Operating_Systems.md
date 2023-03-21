@@ -310,4 +310,47 @@
 <img src="https://user-images.githubusercontent.com/36596037/226603160-f959d282-3a8c-47b1-b2d5-79f417260c1f.png">
 </details>
  
+  <details>
+  <summary><span style="border-bottom:0.05em solid"><strong>응용프로그램의 자원 접근 문제</strong></span></summary>
+    <ul>
+     <li>근래의 운영체제는 다수의 응용프로그램이 한 컴퓨터에서 동시에 실행되는 형태</li> 
+     <li>다양한 문제점</li> 
+     <ul>
+      <li>응용프로그램이 직접 컴퓨터 자원에 접근하면 충돌과 훼손 발생</li> 
+      <li>다른 응용프로그램이 적재된 메모리 훼손 가능</li> 
+     </ul>
+     <li>해결 방안</li> 
+     <ul>
+      <li>응용프로그램의 자원 접근을 불허하며 자원에 대한 모든 접근은 커널에만 부여</li> 
+     </ul>
+     <li>구체적인 해결 방법</li> 
+     <ul>
+      <li>1) 메모리 공간을 사용자 공간과 커널 공간으로 분리 → 응용프로그램은 사용자 공간에만 적재, 커널은 커널 공간에만 적재</li>
+      <li>2) CPU의 실행 모드를 사용자 모드와 커널 모드로 분리</li>
+      <li>3) 응용프로그램이 커널 기능을 이용하고자 할 때, 시스템 호출을 이용해서만 커널 코드 이용</li>
+     </ul>
+  </ul>
+</details>
+ 
+ <details>
+  <summary><span style="border-bottom:0.05em solid"><strong>사용자 공간과 커널 공간</strong></span></summary>
+    <ul>
+     <li>운영체제는 CPU로 액세스(접근) 할 수 있는 전체 주소공간을 2개의 공간으로 분리</li> 
+     <ul>
+      <li>1) 사용자 공간(user space)</li> 
+      <ul>
+       <li>응용프로그램이 적재되고 응용프로그램의 변수가 만들어지고, 동적으로 할당 받는 공간</li> 
+       <li>사용자 모드로만 동작</li> 
+      </ul>
+      <li>2) 커널 공간(kernel space)</li> 
+      <ul>
+       <li>커널만 사용할 수 있는 공간</li> 
+       <li>커널 코드, 커널 데이터 등 커널에 의해 배타적으로사용되는 공간이며 디바이스 드라이버도 포함됨</li> 
+       <li>커널 모드로만 동작</li> 
+      </ul> 
+     </ul>
+  </ul>
+<img src="https://user-images.githubusercontent.com/36596037/226605299-6fddb95d-13f5-49d7-9948-f3f495732771.png">
+</details>
+ 
  
