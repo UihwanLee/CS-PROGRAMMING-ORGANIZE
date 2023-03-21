@@ -11,6 +11,7 @@
 ```
 
  <br>
+ <hr>
 
 <details>
   <summary><span style="border-bottom:0.05em solid"><strong>프로그램(program)</strong></span></summary>
