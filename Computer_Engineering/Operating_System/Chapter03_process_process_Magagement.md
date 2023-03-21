@@ -246,7 +246,39 @@
      <li>프로세스 주소 공간은 각 프로세스마다 별도로 주어짐 → 프로세스마다의 주소 공간은 별개이다.</li>
      <li>프로세스들의 주소 공간은 가상 주소 공간이며, 가상 주소가 물리 주소로 매핑 되므로, 물리 메모리에서는 충돌하지 않는다.</li>
      <li>결론적으로 프로세스의 크기는 실행하면서 변화된다</li>
-     <br>
     </ul>
     ![1](https://user-images.githubusercontent.com/36596037/226573058-440612d1-e499-4eec-9122-63ce044876a6.png)
 </details>
+
+<br>
+### 2. 커널의 프로세스 관리
+<br>
+
+<details>
+  <summary><span style="border-bottom:0.05em solid"><strong>프로세스 테이블과 프로세스 제어 블록</strong></span></summary>
+    <ul>
+     <li>프로세스 테이블(Process Table)</li>
+     <ul>
+      <li>시스템 내에 오직 한 개만 있음</li>
+      <li>시스템 내의 모든 프로세스들을 관리하기 위한 표</li>
+      <li>구현 방식은 운영체제마다 다름</li>
+    </ul>
+     <li>프로세스 제어 블록(Process Control Block, PCB)</li>
+     <ul>
+      <li>프로세스당 하나씩 존재</li>
+      <li>해당 프로세스에 관한 정보를 저장하는 구조체</li>
+      <li>프로세스가 생성될 때 만들어지고 종료되면 삭제</li>
+      <li>커널에 의해 생성, 저장, 읽혀지는 등 관리</li>
+    </ul>
+     <li>프로세스 테이블과 프로세스 제어 블록의 위치</li>
+     <ul>
+      <li>커널 영역에 존재</li>
+      <li>커널 코드(커널 모드)만이 액세스 가능</li>
+      <li>프로세스의 코드, 데이터, 힙, 스택은 물리 메모리에 흩어져서 저장 → 불연속 메모리 할당</li>  
+    </ul>
+    </ul>
+    ![2](https://user-images.githubusercontent.com/36596037/226573974-3b82ae9c-0f91-4915-9fb5-cfaa652e0c8d.png)
+</details>
+
+
+
