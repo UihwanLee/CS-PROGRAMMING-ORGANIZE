@@ -277,7 +277,8 @@
       <li>프로세스의 코드, 데이터, 힙, 스택은 물리 메모리에 흩어져서 저장 → 불연속 메모리 할당</li>  
     </ul>
     </ul>
- ![b](https://user-images.githubusercontent.com/36596037/226575081-43e2b983-3f0f-4056-bb42-f9a73168d945.png)
+<img src="https://user-images.githubusercontent.com/36596037/226576067-5a3de603-39e6-40eb-962f-f54df6ced04c.png">
+<img src="https://user-images.githubusercontent.com/36596037/226576067-5a3de603-39e6-40eb-962f-f54df6ced04c.png" width="600" height="500">
 </details>
 
 
