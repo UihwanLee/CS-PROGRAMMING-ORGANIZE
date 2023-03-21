@@ -341,7 +341,16 @@
 
 <details>
   <summary><span style="border-bottom:0.05em solid"><strong>프로세스 생명 주기와 상태 변이(state change)</strong></span></summary>
-     <img src="https://user-images.githubusercontent.com/36596037/226581123-6a15824c-5ce4-42c0-9ced-0c827c21c056.png" width="1200" height="700">
+    <ul>
+     <li>프로세스의 생명 주기</li>
+     <ul>
+      <li>운영체제 마다 생명 주기(상태의 종류 및 동작)를 구현하는 방식이 다르다</li>
+      <li>프로세스는 탄생에서 종료까지 여러 상태로 바뀌면서 실행</li>
+      <li>상태 정보는 PCB(프로세서 제어 블록)에 기록되고, 상태가 바뀔 때마다 운영제제에 의해 갱신됨</li>
+    </ul>    
+   </ul>
+ <img src="[https://user-images.githubusercontent.com/36596037/226578134-7aa42ced-830b-4bf6-a36a-7e825fb22948.png](https://user-images.githubusercontent.com/36596037/226582565-23e84bc6-208b-48ea-9556-f1f90436fbd8.png)">
+
 </details>
 
 
