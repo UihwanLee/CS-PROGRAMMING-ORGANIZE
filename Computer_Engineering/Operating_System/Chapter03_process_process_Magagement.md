@@ -247,6 +247,6 @@
      <li>프로세스들의 주소 공간은 가상 주소 공간이며, 가상 주소가 물리 주소로 매핑 되므로, 물리 메모리에서는 충돌하지 않는다.</li>
      <li>결론적으로 프로세스의 크기는 실행하면서 변화된다</li>
      <br>
-     ![1](https://user-images.githubusercontent.com/36596037/226572901-84097c05-c8cf-47e4-ae1e-3092429d662e.png)
     </ul>
+    ![1](https://user-images.githubusercontent.com/36596037/226573058-440612d1-e499-4eec-9122-63ce044876a6.png)
 </details>
