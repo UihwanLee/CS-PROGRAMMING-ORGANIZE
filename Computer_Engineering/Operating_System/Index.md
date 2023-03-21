@@ -16,7 +16,7 @@
 
 - [1️⃣ **1장 운영체제의 시작과 발전**](/StudyData)
 - [2️⃣ **2장 컴퓨터 시스템과 운영체제**](/StudyData)
-- [3️⃣ **3장 프로세스와 프로세스 관리**](/Chapter03_process_process_Magagement.md)
+- [3️⃣ **3장 프로세스와 프로세스 관리**](/Computer_Engineering/Operating_System/Chapter03_process_process_Magagement.md)
 
 
 
