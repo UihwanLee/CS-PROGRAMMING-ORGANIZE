@@ -5,4 +5,4 @@
 ### 컴퓨터 공학  
 
 - [1️⃣ **운영체제**](/Computer_Engineering/Operating_System/Index.md) 
-- 2️⃣ **소프트웨어공학**  
+- [2️⃣ **소프트웨어공학**](/Computer_Engineering/Software_Engineering/Index.md)
