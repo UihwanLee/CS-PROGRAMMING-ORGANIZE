@@ -352,4 +352,72 @@
  <img src="https://user-images.githubusercontent.com/36596037/226582565-23e84bc6-208b-48ea-9556-f1f90436fbd8.png">
 </details>
 
-
+<details>
+  <summary><span style="border-bottom:0.05em solid"><strong>프로세스의 상태</strong></span></summary>
+    <ol>
+     <li>New(생성 상태)</li>
+      <ul>
+       <li>프로세스가 생성된 상태이며 PCB에 New 상태로 등록</li>
+       <li>메모리 할당 및 필요 자원이 적재된 상태</li>
+       <li>실행 준비를 마치면 Ready 상태로 바뀜</li>
+      </ul>
+     <li>Ready(준비 상태)</li>   
+      <ul>
+       <li>바로 실행될 수 있는 프로세스가 스케줄링을 기다리는 ‘준비 상태’</li>  
+       <li>프로세스는 준비 큐에서 대기하며 스케줄링 되면 Running 상태로 되고 CPU에 의해 실행됨</li>  
+     </ul>
+     <li>Running(실행 상태)</li>
+     <ul>
+       <li>프로세스가 CPU에 의해 현재 실행되고 있는 상태</li>  
+       <li>실행 중에 CPU의 시간할당량(타임 슬라이스)이 지나면 다시 Ready 상태로 바뀌고 준비 큐에 삽입</li>
+       <li>프로세스가 입출력을 요청하면 커널은 프로세스를 Blocked 상태로 만들고 대기(블록) 큐에 삽입</li>
+     </ul>
+     <li>Blocked/Wait(블록/대기 상태)</li>  
+     <ul>
+       <li>프로세스가 자원을 요청하거나, 입출력을 요청하고 완료를 기다리는 상태</li> 
+       <li>입출력이 완료되면 프로세스는 Ready 상태로 바뀌고 준비 큐에 삽입</li>
+     </ul>
+     <li>Terminated/Zombie 상태</li>  
+     <ul>
+       <li>프로세스가 불완전 종료된 상태(좀비 상태)</li> 
+       <li>프로세스가 차지하고 있던 메모리와 할당 받았던 자원들을 모두 커널에 의해 반환됨</li>
+       <ul>
+        <li>커널에 의해 열어 놓은 파일도 닫힘</li>
+      </ul>
+       <li>하지만, 프로세스 테이블의 항목과 PCB가 여전히 시스템에서 제거되지 않은 상태</li> 
+       <li>프로세스가 남긴 종료 코드(PCB에 있음)를 부모 프로세스가 읽어가지 않아 완전히 종료되지 않은 상태 → 좀비 상태</li>
+     </ul>
+     <li>Terminated/Out 상태</li>  
+     <ul>
+       <li>프로세스가 종료하면서 남긴 종료 코드(PCB에 있음)를 부모 프로세스가 읽어 가서 완전히 종료된 상태</li> 
+       <li>프로세스 테이블의 항목과 PCB가 시스템에서 완전히 제거된 상태</li>
+     </ul>
+  </ol>
+  <img src="https://user-images.githubusercontent.com/36596037/226582565-23e84bc6-208b-48ea-9556-f1f90436fbd8.png">
+</details>
+ 
+ <details>
+  <summary><span style="border-bottom:0.05em solid"><strong>프로세스 스케줄링과 컨텍스트 스위칭(state change)</strong></span></summary>
+    <ul>
+     <li>프로세스 스케줄링과 스레드 스케줄링</li>
+     <ul>
+      <li>프로세스(process) 스케줄링</li>
+      <ul>
+       <li>과거 운영체제에서 실행 단위는 프로세스 였음</li>
+       <li>Ready 상태의 프로세스 중에 실행 시킬 프로세스를 선택</li>
+      </ul>  
+      <li>스레드(thread) 스케줄링</li>
+      <ul>
+       <li>근래의 운영체제에서 실행 단위는 스레드</li>
+       <li>근래의 운영체제는 프로세스 단위의 스케줄링은 없으며 스레드 단위로 스케줄링 실시</li>
+       <li>Ready 상태의 스레드 중 실행시킬 스레드를 선택</li>
+      </ul>  
+     </ul>
+      <li>그럼 프로세스는 뭐지?</li>
+      <ul>
+       <li>프로세스는 스레드들에게 공유 자원을 제공하는 컨테이너로 역할이 바뀌었음</li>
+      </ul>    
+   </ul>
+ <img src="https://user-images.githubusercontent.com/36596037/226584848-59c6b3ed-3bc0-4e93-bc96-a4b99c124aac.png">
+</details>
+ 
