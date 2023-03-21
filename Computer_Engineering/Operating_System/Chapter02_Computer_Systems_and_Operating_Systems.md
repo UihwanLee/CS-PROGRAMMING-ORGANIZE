@@ -34,6 +34,7 @@
   <img src="https://user-images.githubusercontent.com/36596037/226596063-13093717-c866-47f5-8bff-8980f7a92c72.png">
 </details>
 
+<details>
   <summary><span style="border-bottom:0.05em solid"><strong>컴퓨터 하드웨어 설명</strong></span></summary>
     <ul>
      <li>CPU(Central Processing Unit)</li> 
