@@ -249,9 +249,9 @@
     </ul>
     ![1](https://user-images.githubusercontent.com/36596037/226573058-440612d1-e499-4eec-9122-63ce044876a6.png)
 </details>
-
-<br>
+    
 ### 2. 커널의 프로세스 관리
+
 <br>
 
 <details>
