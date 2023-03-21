@@ -247,9 +247,11 @@
      <li>프로세스들의 주소 공간은 가상 주소 공간이며, 가상 주소가 물리 주소로 매핑 되므로, 물리 메모리에서는 충돌하지 않는다.</li>
      <li>결론적으로 프로세스의 크기는 실행하면서 변화된다</li>
     </ul>
-    ![1](https://user-images.githubusercontent.com/36596037/226573058-440612d1-e499-4eec-9122-63ce044876a6.png)
+ <img src="https://user-images.githubusercontent.com/36596037/226573058-440612d1-e499-4eec-9122-63ce044876a6.png">
 </details>
-    
+
+<hr>
+
 ### 2. 커널의 프로세스 관리
 
 <br>
@@ -278,7 +280,6 @@
     </ul>
     </ul>
 <img src="https://user-images.githubusercontent.com/36596037/226576067-5a3de603-39e6-40eb-962f-f54df6ced04c.png">
-<img src="https://user-images.githubusercontent.com/36596037/226576067-5a3de603-39e6-40eb-962f-f54df6ced04c.png" width="600" height="500">
 </details>
 
 
